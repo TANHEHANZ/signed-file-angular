@@ -1,0 +1,9 @@
+name: prueba
+services:
+  frontend:
+    build:
+      context: ./
+      dockerfile: dockerfile
+    restart: always
+    ports:
+      - "80:8080"
