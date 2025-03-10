@@ -4,7 +4,7 @@ import { Component, EventEmitter, input, Output, output } from '@angular/core';
 @Component({
   selector: 'button-secundary',
   imports: [NgIf],
-  standalone: true,
+
   template: `
     <button
       (click)="onClick()"

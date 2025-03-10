@@ -4,7 +4,7 @@ import { Component, input, output } from '@angular/core';
 @Component({
   selector: 'button-primary',
   imports: [NgIf],
-  standalone: true,
+
   template: `
     <button
       (click)="onClick()"

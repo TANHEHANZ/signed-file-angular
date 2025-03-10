@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ButtonPrimaryComponent } from '../../../../../shared/ui/button/primary.component';
-import { ICONS } from '../../../../../shared/ui/icons';
+import { ButtonPrimaryComponent } from '../../../shared/ui/button/primary.component';
+import { ICONS } from '../../../shared/ui/icons';
 
 @Component({
   selector: 'login-informacion',

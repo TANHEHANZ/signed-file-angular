@@ -1,0 +1,25 @@
+<p-toast></p-toast>
+<section class="flex flex-col gap-2">
+  <!-- <div class="flex justify-around items-center"> -->
+  <h1 class="text-3xl font-light my-8">Documentos firmados</h1>
+  <!-- <count-component [data]="infoTop" class="w-full"></count-component> -->
+  <!-- </div> -->
+
+  <section class="w-full flex flex-col justify-center items-start">
+    <button-primary
+      [icon]="ICONS.SIGNATURE"
+      label="Firmar documento"
+      (click)="openModal('actualizar')"
+    ></button-primary>
+  </section>
+
+  <table-signed-file class="w-full"></table-signed-file>
+
+  @if(currentModal != null){
+  <modal>
+    @if(currentModal === 'actualizar') {
+    <app-upload></app-upload>
+    }
+  </modal>
+  }
+</section>

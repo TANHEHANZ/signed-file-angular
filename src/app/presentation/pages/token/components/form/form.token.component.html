@@ -1,0 +1,151 @@
+<!-- <Form class="p-4 flex flex-col gap-4" [formGroup]="form">
+  <h2 class="text-2xl font-bold text-center">Formulario registro de tokens</h2>
+  <section class="grid grid-cols-2">
+    <div class="col-span-2">
+      <p>
+        <i [ngClass]="ICONS.INFO"></i>
+        Debes tener instalado
+        <span class="text-primary border-b cursor-pointer">Jacubitus</span>
+      </p>
+      <p>
+        <i [ngClass]="ICONS.INFO"></i>
+        Debes tener
+        <span class="text-primary border-b cursor-pointer">Jacubitus</span>
+        funcionando
+      </p>
+    </div>
+    @if(!validated){
+    <div class="col-span-2">
+      <custom-input
+        label="Ingresa el ping"
+        type="text"
+        [control]="form.controls.ping"
+      />
+      <button-primary
+        label="Validar Token"
+        (clicked)="validarToken()"
+        class="w-[50%]"
+      />
+    </div>
+    }@else{
+
+    <div class="col-span-2 p-4">
+      <custom-stepper
+        [steps]="steps"
+        (stepChange)="onStepChange($event)"
+        (completed)="onComplete()"
+      >
+      </custom-stepper>
+    </div>
+    }
+
+    <ng-template #tokenInfo>
+      <div class="grid grid-cols-4 gap-4">
+        <p class="col-span-4 text-xl font-bold">Informacion del Token</p>
+
+        <custom-input
+          label="Cantidad de certificados"
+          type="text"
+          [control]="form.controls.cantidad_certificados"
+        />
+        <custom-input
+          label="Cantidad de llaves privadas"
+          type="text"
+          [control]="form.controls.cantidad_priv_key"
+        />
+        <custom-input
+          label="Alias"
+          type="text"
+          [control]="form.controls.alias"
+        />
+        <custom-input
+          label="Tipo de Token"
+          type="text"
+          [control]="form.controls.tipo_token"
+        />
+        <custom-input
+          label="Token ID"
+          type="text"
+          [control]="form.controls.token_id"
+        />
+      </div>
+    </ng-template>
+    <ng-template #certificadoInfo>
+      <div class="grid grid-cols-4 gap-4">
+        <p class="col-span-4 text-xl font-bold">
+          Informacion del Certificado del token
+        </p>
+
+        <custom-input
+          label="Tipo de Certificado"
+          type="text"
+          [control]="form.controls.tipo_certificado"
+        />
+        <custom-input
+          label="ID Certificado"
+          type="text"
+          [control]="form.controls.id_certificado_token"
+        />
+        <custom-input
+          label="Válido Desde"
+          type="text"
+          [control]="form.controls.desde"
+        />
+        <custom-input
+          label="Válido Hasta"
+          type="text"
+          [control]="form.controls.hasta"
+        />
+        <custom-input
+          class="col-span-4"
+          label="Entidad Certificadora"
+          type="text"
+          [control]="form.controls.entidad"
+        />
+      </div>
+    </ng-template>
+
+    <ng-template #userInfo>
+      <div class="grid grid-cols-4 gap-4">
+        <p class="col-span-4 text-xl font-bold">Titular del Certificado</p>
+        <custom-input label="CI" type="text" [control]="form.controls.ci" />
+        <custom-input
+          class="col-span-3"
+          label="Descripción"
+          type="text"
+          [control]="form.controls.descripcion"
+        />
+        <custom-input
+          class="col-span-2"
+          label="Email"
+          type="text"
+          [control]="form.controls.email"
+        />
+        <custom-input
+          class="col-span-2"
+          label="Nombre Completo"
+          type="text"
+          [control]="form.controls.nombre"
+        />
+      </div>
+    </ng-template>
+
+    <ng-template #assignmentInfo>
+      <div class="col-span-4 grid grid-cols-4 gap-4">
+        <p class="col-span-4 text-xl font-bold">
+          Asignacion del token al usuario
+        </p>
+
+        <custom-select
+          class="col-span-4"
+          label="Seleccione el usuario:"
+          [options]="[
+            { label: 'Activo', value: 'ACTIVO' },
+            { label: 'Deshabilitado', value: 'DESHABILITADO' }
+          ]"
+          [control]="form.controls.id_user_create"
+        />
+      </div>
+    </ng-template>
+  </section>
+</Form> -->

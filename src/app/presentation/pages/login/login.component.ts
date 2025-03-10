@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ButtonModule } from 'primeng/button';
 import { LoginInformacionComponent } from './components/information.component';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
 import { RouterOutlet } from '@angular/router';
+import { environment } from '../../../application/config/environment.development';
 
 @Component({
   selector: 'app-login',
@@ -25,4 +26,8 @@ import { RouterOutlet } from '@angular/router';
     </main>
   `,
 })
-export class LoginComponent {}
+export class LoginComponent implements OnInit {
+  ngOnInit(): void {
+    console.log('Current environment:', environment);
+  }
+}
